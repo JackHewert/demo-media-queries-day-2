@@ -13,8 +13,35 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+.container {
+    padding: 1rem;
+
+}
+
+h2 {
+    font-size: 2rem;
+    padding: 1.5rem 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.container section:nth-of-type(even) {
+    background-color: #3d1f10;
+}
+
+.container section:nth-of-type(odd) {
+    background-color: #b04507;
+}
+
+.container section {
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
 section a {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 0.25rem;
     color: #fff;
     display: inline-block;
@@ -23,5 +50,70 @@ section a {
 }
 
 section a:hover {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+section div {
+    padding: 0.5rem;
+}
+
+@media screen and (min-width:540px) {
+    .container section {
+        display: flex;
+        align-items: center;
+    }
+
+    section img,
+    section div {
+        width: 50%;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        display: flex;
+        flex-flow: wrap;
+        gap: 2%;
+    }
+
+    .container section {
+        width: calc(98%/2);
+    }
+
+    h2 {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1850px) {
+    .container {
+        max-width: 112.5rem;
+    }
+}
+
+.one {
+    order: 1;
+}
+
+.two {
+    order: 2;
+}
+
+.three {
+    order: 4;
+}
+
+.four {
+    order: 3;
+}
+
+.five {
+    order: 5;
+}
+
+.six {
+    order: 6;
 }
